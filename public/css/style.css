@@ -1,0 +1,122 @@
+/* General styles for the body to set font, background color, and remove default margin and padding */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling the container for the forms and content with a fixed width, centered alignment, and box shadow for emphasis */
+.container {
+  width: 500px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for headings (h1 and h2) with centered alignment and color */
+h1,
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Margins for form containers for spacing */
+.form-container {
+  margin-bottom: 20px;
+}
+
+/* Styling for labels to be block elements with spacing */
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* General input and select field styling for uniform appearance and padding */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button styling with padding, color, background color, and rounded corners */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Button hover effect for a darker blue background */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the sign-up message text to be green and centered */
+#signUpMessage {
+  text-align: center;
+  color: green;
+}
+
+/* Duplicate body styling (unnecessary but can be merged with the first block) */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Styling for a larger container with max-width to hold more content and with box-shadow for depth */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Duplicate heading styling */
+h1,
+h2 {
+  text-align: center;
+}
+
+/* Inputs, textareas, and buttons share similar styles such as block display, width, padding, and rounded corners */
+input,
+textarea,
+button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Button background color and hover effect for interaction feedback */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for each article in the list, with a bottom border for separation */
+#articlesList div {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}

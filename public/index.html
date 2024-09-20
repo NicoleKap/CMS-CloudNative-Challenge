@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- This sets the character encoding for the document to UTF-8, which supports a wide range of characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures that the page is responsive and scales according to the device's width -->
+    <title>Article Management</title>
+    <!-- The title that appears on the browser tab -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Link to the external CSS file for styling the page -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Article Management</h1>
+      <!-- Main title for the page -->
+
+      <!-- Login Form Section -->
+      <div class="form-container">
+        <h2>Login</h2>
+        <!-- Form for user login -->
+        <form id="loginForm">
+          <!-- Label and input field for username -->
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="loginUsername"
+            name="username"
+            placeholder="Enter your username"
+          />
+
+          <!-- Label and input field for password -->
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="loginPassword"
+            name="password"
+            placeholder="Enter your password"
+          />
+
+          <!-- Button to submit the login form -->
+          <button type="submit">Login</button>
+        </form>
+      </div>
+
+      <!-- Sign Up Form Section -->
+      <div class="form-container">
+        <h2>Sign Up</h2>
+        <!-- Form for user registration (sign up) -->
+        <form id="signUpForm">
+          <!-- Label and input field for username -->
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="signUpUsername"
+            name="username"
+            placeholder="Enter your username"
+          />
+
+          <!-- Label and input field for email -->
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="signUpEmail"
+            name="email"
+            placeholder="Enter your email"
+          />
+
+          <!-- Label and input field for password -->
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="signUpPassword"
+            name="password"
+            placeholder="Enter your password"
+          />
+
+          <!-- Label and dropdown selection for user role (Admin or Guest) -->
+          <label for="role">Role:</label>
+          <select id="signUpRole">
+            <option value="admin">Admin</option>
+            <option value="guest">Guest</option>
+          </select>
+
+          <!-- Button to submit the sign-up form -->
+          <button type="submit">Sign Up</button>
+
+          <!-- Message that will be shown to the user after sign-up attempt -->
+          <p id="signUpMessage" style="color: red"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Link to the external JavaScript file to handle login and sign-up functionality -->
+    <script src="./login.js"></script>
+  </body>
+</html>

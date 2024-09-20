@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- This sets the character encoding for the document to UTF-8, which supports most characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures the page is responsive by setting the viewport properties, making the page scale to the device width -->
+    <title>Dashboard</title>
+    <!-- Title of the document displayed in the browser tab -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Link to an external CSS file for styling the page -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Article Management</h1>
+      <!-- Main header of the page for the article management dashboard -->
+
+      <!-- Form for creating a new article -->
+      <h2>Create New Article</h2>
+      <form id="createArticleForm">
+        <!-- Input for the article title -->
+        <input type="text" id="articleTitle" placeholder="Title" required />
+        <!-- Textarea for the article content -->
+        <textarea id="articleContent" placeholder="Content" required></textarea>
+        <!-- Input for the author ID, assuming articles are linked to authors by ID -->
+        <input type="text" id="articleAuthor" placeholder="Author ID" required />
+        <!-- Submit button to create the article -->
+        <button type="submit">Create Article</button>
+      </form>
+
+      <hr />
+      <!-- Horizontal line to separate sections -->
+
+      <!-- Button to trigger loading of articles from the server -->
+      <button id="loadArticlesBtn">Load Articles</button>
+      <!-- Div where the list of loaded articles will be displayed -->
+      <div id="articlesList"></div>
+
+      <hr />
+
+      <!-- Section for updating an existing article -->
+      <h2>Update Article</h2>
+      <form id="updateArticleForm">
+        <!-- Input for the ID of the article to be updated -->
+        <input type="text" id="updateArticleId" placeholder="Article ID" required />
+        <!-- Input for the new title of the article (optional) -->
+        <input type="text" id="updateArticleTitle" placeholder="New Title" />
+        <!-- Textarea for the new content of the article (optional) -->
+        <textarea id="updateArticleContent" placeholder="New Content"></textarea>
+        <!-- Input for the new author ID (optional) -->
+        <input type="text" id="updateArticleAuthor" placeholder="New Author ID" />
+        <!-- Submit button to update the article -->
+        <button type="submit">Update Article</button>
+      </form>
+
+      <hr />
+
+      <!-- Section for deleting an article -->
+      <h2>Delete Article</h2>
+      <form id="deleteArticleForm">
+        <!-- Input for the ID of the article to be deleted -->
+        <input type="text" id="deleteArticleId" placeholder="Article ID" required />
+        <!-- Submit button to delete the article -->
+        <button type="submit">Delete Article</button>
+      </form>
+
+      <hr />
+
+      <!-- Form for uploading an image associated with an article -->
+      <h2>Upload Image for Article</h2>
+      <form id="uploadImageForm">
+        <!-- Dropdown for selecting an article to upload the image for -->
+        <label for="articleSelect">Select Article:</label>
+        <select id="articleSelect">
+          <option value="">Choose an article</option>
+          <!-- Articles will be dynamically loaded here via JavaScript -->
+        </select>
+        <!-- Input for selecting the image file to upload -->
+        <input type="file" id="articleImage" required />
+        <!-- Submit button to upload the selected image -->
+        <button type="submit">Upload Image</button>
+      </form>
+      <!-- Div to display messages about the image upload status -->
+      <div id="uploadImageMessage"></div>
+    </div>
+
+    <!-- Link to the JavaScript file that contains the logic for form submission and data loading -->
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "9cb53382-c09d-4b3d-8776-72ec015da864",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33282320"
+	},
+	"item": [
+		{
+			"name": "User Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Nicole_959697\",\r\n  \"email\": \"nicoletakapsali@hotmail.com\",\r\n  \"password\": \"pass2027\",\r\n  \"role\": \"admin\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Nicole_959697\",\r\n    \"password\": \"pass2027\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new Article",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmVkNDI2NjBhNTIwMWZjZjcxNmNlMzIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjY4MjUxNTcsImV4cCI6MTczNDYwMTE1N30.U9Nm5OXstHepQK4SX80MiCcEg2RG8dVZnxsmsNOv8EM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n  \"title\": \"New Adventures of Sherlock Holmes\",\r\n  \"content\": \"This article is about the new adventures of the famous detective Sherlock Holmes.\",\r\n  \"author\": \"613b72f4f69b2a001fba988a\",\r\n  \"image\":\"https://play-lh.googleusercontent.com/MVMsx8XEUK2679ymzcB6hPifLoH9vf1E_IjjtyPzkt9o-WV_w1CmewoNZP18b5Cn-MEx=w240-h480-rw\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the Articles List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an Article",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmVkNDI2NjBhNTIwMWZjZjcxNmNlMzIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjY4MjUxNTcsImV4cCI6MTczNDYwMTE1N30.U9Nm5OXstHepQK4SX80MiCcEg2RG8dVZnxsmsNOv8EM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"title\": \" Lion King\",\r\n    \"content\": \"1994 was the year of creation and is The best disney movie of all times.\",\r\n    \"author\": \"66ecbb4a4696eb440d490648\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/articles/66ecc3473f0180eee99cbb6a?Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmVkNDI2NjBhNTIwMWZjZjcxNmNlMzIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjY4MjUxNTcsImV4cCI6MTczNDYwMTE1N30.U9Nm5OXstHepQK4SX80MiCcEg2RG8dVZnxsmsNOv8EM",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"articles",
+						"66ecc3473f0180eee99cbb6a"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmVkNDI2NjBhNTIwMWZjZjcxNmNlMzIiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjY4MjUxNTcsImV4cCI6MTczNDYwMTE1N30.U9Nm5OXstHepQK4SX80MiCcEg2RG8dVZnxsmsNOv8EM"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
